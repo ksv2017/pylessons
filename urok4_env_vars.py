@@ -1,6 +1,5 @@
 import platform
 import subprocess
-import sys
 
 
 def get_list_of_env_vars_based_on_os():
@@ -18,6 +17,15 @@ def get_list_of_env_vars_based_on_os():
     return subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
 
+def print_all_env_vars():
+    p = get_list_of_env_vars_based_on_os()
+    for line in p.stdout.readlines():
+        print(line.decode('utf-8'))
+
+
+print_all_env_vars()
+
+
 def find_env_var(candidate):
     p = get_list_of_env_vars_based_on_os()
     for line in p.stdout.readlines():
@@ -25,9 +33,4 @@ def find_env_var(candidate):
         if var_name == candidate:
             print(line.decode('utf-8'))
 
-
-find_env_var('Path') # can be split by ',' into different paths...
-
-
-# to run from cmd: python urok4_env_vars.py Path
-# find_env_var(sys.argv[1])
+# find_env_var('PATH') # 'Path' on Windows

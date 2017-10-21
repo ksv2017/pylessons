@@ -3,7 +3,7 @@ import subprocess
 
 
 def get_list_of_env_vars_based_on_os():
-    """ This script detects which OS is running and based on that reads all env variables """
+    """ This function detects which OS is running and based on that reads all env variables """
     cmd = ''
     if platform.system() == 'Windows':
         print('Running Windows', platform.release())
@@ -22,15 +22,18 @@ def print_all_env_vars():
     for line in p.stdout.readlines():
         print(line.decode('utf-8'))
 
-
-print_all_env_vars()
+# print_all_env_vars()
 
 
 def find_env_var(candidate):
     p = get_list_of_env_vars_based_on_os()
+    found = False
     for line in p.stdout.readlines():
         var_name = line.decode('utf-8')[0:line.decode('utf-8').index('=')]
         if var_name == candidate:
+            found = True
             print(line.decode('utf-8'))
+    if not found:
+        print('Environmental variable \'', candidate, '\' not found...')
 
-# find_env_var('PATH') # 'Path' on Windows
+find_env_var('Path') # 'Path' on Windows & 'PATH' on Linux

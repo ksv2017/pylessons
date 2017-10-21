@@ -2,7 +2,7 @@ import random
 
 
 def list_of_randomly_generated_ints(range):
-    """the description of the function goes here"""
+    """ This function generates a list of random numbers between 1 and 20 """
     list = []
     i = 0
     while i < range:
@@ -12,6 +12,7 @@ def list_of_randomly_generated_ints(range):
 
 
 def convert_celcius_into_farenheit(celcius):
+    """ This function converts a temperature from Celcius into Farenheit """
     f = (celcius * 1.8) + 32
     return f
 

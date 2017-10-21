@@ -24,9 +24,9 @@ This repository contains Python lessons designed to provide a basic understandin
 
 [Documentation](https://docs.python.org/3/) about Python - dynamically typed programming language.
 
-[python-image]: https://docs.python.org/3/_static/py.png
+[python-image]: http://www.computeracademy.com.hk/images/course_slider/python-programming_banner.jpg
 [Lesson-image1]: https://img.shields.io/badge/Lesson-1-blue.svg?style=plastic
-[Lesson-image2]: https://img.shields.io/badge/Lesson-1-blue.svg?style=plastic
-[Lesson-image3]: https://img.shields.io/badge/Lesson-1-blue.svg?style=plastic
-[Lesson-image4]: https://img.shields.io/badge/Lesson-1-blue.svg?style=plastic
-[Lesson-image5]: https://img.shields.io/badge/Lesson-1-blue.svg?style=plastic
+[Lesson-image2]: https://img.shields.io/badge/Lesson-2-blue.svg?style=plastic
+[Lesson-image3]: https://img.shields.io/badge/Lesson-3-blue.svg?style=plastic
+[Lesson-image4]: https://img.shields.io/badge/Lesson-4-blue.svg?style=plastic
+[Lesson-image5]: https://img.shields.io/badge/Lesson-5-blue.svg?style=plastic

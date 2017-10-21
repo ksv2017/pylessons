@@ -1,7 +1,9 @@
 import json
 import urllib.request
 
+
 def read_albums_by_userid(userid):
+    """ This function reads the json data from API and returns a list of albums by id """
     url = "https://jsonplaceholder.typicode.com/albums"
     response = urllib.request.urlopen(url)
     string = response.read().decode('utf-8')
@@ -13,6 +15,8 @@ def read_albums_by_userid(userid):
             list_of_albums_by_id.append(item)
     return list_of_albums_by_id
 
+
+# The albums by user id are written into file and retrieved from the same file
 list_from_function = read_albums_by_userid(2)
 fo = open('myfile', 'w')
 for item in list_from_function:
@@ -24,4 +28,3 @@ with open('myfile') as f:
     lines = f.readlines()
     for line in lines:
         print(line)
-

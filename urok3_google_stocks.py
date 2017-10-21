@@ -1,5 +1,11 @@
-# https://finance.yahoo.com/quote/GOOG/history?p=GOOG
+"""
+    This script processes data from yahoo API
+    https://finance.yahoo.com/quote/GOOG/history?p=GOOG
+    The data is downloaded for the last 5 years into GOOG.csv file
+"""
+
 def get_dict_yyyymm_volume(csvfilename):
+    """ This function creates a dict with the volume for each month """
     with open(csvfilename, newline='') as csvfilecursor:
         next(csvfilecursor, None).split(',')
         # Date, Open, High, Low, Close, Adj Close, Volume

@@ -34,7 +34,8 @@ def ssh_connect_and_exec_command(args):
         stdin, stdout, stderr = ssh.exec_command('ls -la /var/log')
         standard_console_output = stdout.read().decode('utf-8')
         ssh.close()
-    except paramiko.SSHException:
+    except (paramiko.SSHException, TimeoutError) as e:
+        print(e)
         sys.exit('There was a problem establishing SSH connection to the remote server...')
     return standard_console_output
 

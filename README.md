@@ -20,6 +20,15 @@ This repository contains Python lessons designed to provide a basic understandin
 
 ![Lesson][Lesson-image5] - Introduction to regular expressions
 
+#### Pylint
+
+In order to run [pylint](https://docs.pylint.org/en/1.6.0/installation.html) it needs to be installed since it is external analyser tool for static code analyses.
+
+```shell
+python -m pip install pylint
+python -m pylint module_or_folder_name
+```
+
 #### References
 
 [Documentation](https://docs.python.org/3/) about Python - dynamically typed programming language.

@@ -10,7 +10,7 @@ This repository contains Python lessons designed to provide a basic understandin
 
 #### Contents
 
-![Lesson][Lesson-image1] - Functions
+![Lesson][Lesson-image1] - Introduction to functions
 
 ![Lesson][Lesson-image2] - Reading json data from API
 
@@ -18,7 +18,7 @@ This repository contains Python lessons designed to provide a basic understandin
 
 ![Lesson][Lesson-image4] - Printing environmental variables based on the OS
 
-![Lesson][Lesson-image5] - Introduction to regular expressions
+![Lesson][Lesson-image5] - SSH connection to the remote server
 
 #### Pylint
 

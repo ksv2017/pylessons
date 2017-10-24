@@ -29,15 +29,9 @@ python -m pip install pylint
 
 python -m pylint module_or_folder_name
 
-# you should see something similar:
-C:\path_to_pylessons_folder>python -m pylint urok5_ssh_connection.py
-No config file found, using default configuration
-************* Module urok5_ssh_connection
-W: 34, 8: Unused variable 'stdin' (unused-variable)
-W: 34,23: Unused variable 'stderr' (unused-variable)
-
-------------------------------------------------------------------
-Your code has been rated at 9.17/10 (previous run: 9.17/10, +0.00)
+# As a result, you should get the code rating similarly as follows:
+# ------------------------------------------------------------------
+# Your code has been rated at 9.17/10 (previous run: 9.17/10, +0.00)
 ```
 
 #### References

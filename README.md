@@ -24,7 +24,7 @@ This repository contains Python lessons designed to provide a basic understandin
 
 In order to run [pylint](https://docs.pylint.org/en/1.6.0/installation.html) it needs to be installed since it is external analyser tool for static code analyses.
 
-```shell
+```sh
 python -m pip install pylint
 
 python -m pylint module_or_folder_name

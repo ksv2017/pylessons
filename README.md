@@ -20,6 +20,8 @@ This repository contains Python lessons designed to provide a basic understandin
 
 ![Lesson][Lesson-image5] - SSH connection to the remote server
 
+![Lesson][Lesson-image6] - Use regex to find failed login attempts
+
 #### Pylint
 
 In order to run [pylint](https://docs.pylint.org/en/1.6.0/installation.html) it needs to be installed since it is external analyser tool for static code analyses.
@@ -44,3 +46,4 @@ python -m pylint module_or_folder_name
 [Lesson-image3]: https://img.shields.io/badge/Lesson-3-blue.svg?style=plastic
 [Lesson-image4]: https://img.shields.io/badge/Lesson-4-blue.svg?style=plastic
 [Lesson-image5]: https://img.shields.io/badge/Lesson-5-blue.svg?style=plastic
+[Lesson-image6]: https://img.shields.io/badge/Lesson-6-blue.svg?style=plastic

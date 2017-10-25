@@ -31,7 +31,7 @@ def ssh_connect_and_exec_command(args):
         # otherwise SSHException('Server %r not found in known_hosts' % hostname) will be thrown.
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(hostname, port, username, password)
-        stdin, stdout, stderr = ssh.exec_command('df -k')
+        stdin, stdout, stderr = ssh.exec_command('cat /var/log/secure | grep "Failed password"')
         standard_console_output = stdout.read().decode('utf-8')
         ssh.close()
     except Exception as e:
@@ -40,4 +40,4 @@ def ssh_connect_and_exec_command(args):
     return standard_console_output
 
 
-print(ssh_connect_and_exec_command(sys.argv[1:]))
+# print(ssh_connect_and_exec_command(sys.argv[1:]))

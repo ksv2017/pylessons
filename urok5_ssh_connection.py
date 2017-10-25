@@ -3,7 +3,7 @@
     and prints the standard output to the console.
     In order to execute the script, cd into the folder where it is located (pylessons),
     run the python command followed by filename, hostname, port, username and password:
-            e.g. 'python urok5_ssh_connection.py hostname 22 username password'
+        e.g. 'python urok5_ssh_connection.py <hostname> 22 <username> <password>'
 """
 import sys
 import paramiko
@@ -31,12 +31,13 @@ def ssh_connect_and_exec_command(args):
         # otherwise SSHException('Server %r not found in known_hosts' % hostname) will be thrown.
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(hostname, port, username, password)
-        stdin, stdout, stderr = ssh.exec_command('ls -la /var/log')
+        stdin, stdout, stderr = ssh.exec_command('cat /var/log/secure | grep "Failed password"')
         standard_console_output = stdout.read().decode('utf-8')
         ssh.close()
-    except paramiko.SSHException:
+    except Exception as e:
+        print(e)
         sys.exit('There was a problem establishing SSH connection to the remote server...')
     return standard_console_output
 
 
-print(ssh_connect_and_exec_command(sys.argv[1:]))
+# print(ssh_connect_and_exec_command(sys.argv[1:]))

@@ -27,7 +27,7 @@ def get_monthly_volumes_by_year(year):
     return dict_yyyymm_volume
 
 
-def plot_the_data_using_pylab(dict_yyyymm_volume):
+def plot_the_bar_chart(dict_yyyymm_volume):
     """ This function plots a bar chart based on the monthly volumes """
     list_of_x_values = []   # months
     list_of_y_values = []   # volumes
@@ -54,4 +54,4 @@ def plot_the_data_using_pylab(dict_yyyymm_volume):
 
 
 if __name__ == "__main__":
-    plot_the_data_using_pylab(get_monthly_volumes_by_year(2016))
+    plot_the_bar_chart(get_monthly_volumes_by_year(2016))

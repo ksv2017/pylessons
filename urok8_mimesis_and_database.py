@@ -3,9 +3,9 @@
 
     This module generates dummy data and inserts it into database.
 """
+import sqlite3
 from mimesis import Personal, Datetime, Address
 from mimesis.builtins import USASpecProvider
-import sqlite3
 
 
 def generate_fake_persons(size):
@@ -19,7 +19,8 @@ def generate_fake_persons(size):
 
     fake_persons = []
     for _ in range(0, size):
-        fake_person = (person.email(), person.username(), person.full_name(), datetime.date(1970, 2000), \
+        fake_person = (person.email(), person.username(), \
+                       person.full_name(), datetime.date(1970, 2000), \
                        address.address() + " - " + address.state(), usa_provider.ssn())
         fake_persons.append(fake_person)
 
@@ -33,7 +34,8 @@ def db_stuff(list_of_fake_persons):
     con = sqlite3.connect('test_baza.db')
     cursor = con.cursor()
 
-    sql_create = 'CREATE TABLE peoples (email text, uname text, fname text, dob text, address text, ssn text)'
+    sql_create = 'CREATE TABLE peoples \
+        (email text, uname text, fname text, dob text, address text, ssn text)'
     cursor.execute(sql_create)
     con.commit()
 
@@ -56,5 +58,4 @@ def db_stuff(list_of_fake_persons):
 
 
 if __name__ == "__main__":
-    list_of_fake_persons = generate_fake_persons(5)
-    db_stuff(list_of_fake_persons)
+    db_stuff(generate_fake_persons(5))

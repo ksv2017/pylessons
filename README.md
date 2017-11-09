@@ -24,6 +24,8 @@ This repository contains Python lessons designed to provide a basic understandin
 
 ![Lesson][Lesson-image7] - Use matplotlib to draw a simple bar chart
 
+![Lesson][Lesson-image8] - Use mimesis to populate SQLite database
+
 #### Pylint
 
 In order to run [pylint](https://docs.pylint.org/en/1.6.0/installation.html) it needs to be installed since it is external analyser tool for static code analyses.
@@ -50,3 +52,4 @@ python -m pylint module_or_folder_name
 [Lesson-image5]: https://img.shields.io/badge/Lesson-5-blue.svg?style=plastic
 [Lesson-image6]: https://img.shields.io/badge/Lesson-6-blue.svg?style=plastic
 [Lesson-image7]: https://img.shields.io/badge/Lesson-7-blue.svg?style=plastic
+[Lesson-image8]: https://img.shields.io/badge/Lesson-8-blue.svg?style=plastic
